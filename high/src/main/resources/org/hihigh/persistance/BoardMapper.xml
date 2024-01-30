@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.hihigh.persistance.BoardMapper">
+	<!-- 게시물 목록 -->
+	<select id="blist" resultType="org.hihigh.domain.BoardVO">
+		select * from board order by bnum desc
+	</select>
+	
+	<!-- 내 게시물 목록 + 페이징-->
+	<select id="myPostList" resultType="org.hihigh.domain.BoardVO" >
+	    select * from board where id = #{id} order by re_date desc
+	</select>
+
+	<!-- 게시물 목록 검색 -->
+	<select id="search" parameterType="map" resultType="org.hihigh.domain.BoardVO">
+	    SELECT * FROM board
+	    WHERE
+	    <choose>
+	        <when test="keyfield == 'subject'">
+	            subject LIKE CONCAT('%', #{keyword}, '%')
+	        </when>
+	        <when test="keyfield == 'contents'">
+	            contents LIKE CONCAT('%', #{keyword}, '%')
+	        </when>
+	    </choose>
+	    ORDER BY bnum DESC
+	</select>
+	
+	<!-- 게시물 입력 -->
+<insert id="insertBoard" parameterType="org.hihigh.domain.BoardVO">
+    insert into board (id, subject, contents, postfile, profile)
+    values (#{id}, #{subject}, #{contents}, #{postfile}, #{profile})
+</insert>
+
+	
+	<!-- 게시물 자세히 보기 -->
+	<select id="read" parameterType="java.lang.Long" resultType="org.hihigh.domain.BoardVO">
+	    SELECT * FROM board WHERE bnum = #{bnum}
+	</select>
+	
+	<!-- 게시물 수정 -->
+	<update id="postupdate">
+   		update board
+   		set subject = #{subject}, profile=#{profile}, postfile = #{postfile}, contents = #{contents} where bnum = #{bnum}
+	</update>
+	
+	<!-- 게시물 삭제 -->
+	<delete id="deletepost">
+	    DELETE FROM board WHERE bnum = #{bnum}
+	</delete>
+	
+	<!-- 게시물 조회수 증가 -->
+	<update id="upCount">
+		update board set count=count+1 where bnum=#{bnum}
+	</update>
+	
+	<!-- 게시물 총 수량 -->
+	<select id="totalpost" resultType="int" statementType="STATEMENT">
+	    select count(*) from board
+	</select>
+
+	<!-- 댓글 생성 -->
+	<insert id="insertreply">
+		insert into reply(bnum, id, recontents)
+		values ( #{bnum}, #{id}, #{recontents} )
+	</insert>
+
+	<!-- 댓글 목록 -->
+	<select id="getReplies" resultType="org.hihigh.domain.ReplyVO">
+	    SELECT * FROM reply
+	    WHERE bnum = #{bnum}
+	    ORDER BY redate DESC
+	</select>
+	
+	<!-- 모든 댓글 불러오기 -->
+	<select id="totalReply" resultType="org.hihigh.domain.ReplyVO">
+	    SELECT * FROM reply
+	</select>
+	
+	<!-- 댓글 수정 -->
+	<update id="Reupdate" parameterType="org.hihigh.domain.ReplyVO">
+		update reply set 
+			bnum = #{bnum}, id = #{id}, recontents = #{recontents}
+			where renum = #{renum}
+	</update>
+	
+	<!-- 댓글 삭제 -->
+	<delete id="deleteReply">
+		delete from reply where renum = #{renum}
+	</delete>
+	
+	<!-- 좋아요 추가 -->
+	<insert id="insertLike" parameterType="map">
+	  INSERT INTO liky (id, bnum) VALUES (#{id}, #{bnum})
+	</insert>
+	
+	<!-- 좋아요 삭제 -->
+	<delete id="deleteLike" parameterType="map">
+	  DELETE FROM liky WHERE id = #{id} AND bnum = #{bnum}
+	</delete>
+	
+	<!-- 좋아요 여부 확인 -->
+	<select id="isLiked" parameterType="map" resultType="int">
+	  SELECT COUNT(*) FROM liky WHERE id = #{id} AND bnum = #{bnum}
+	</select>
+	  
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

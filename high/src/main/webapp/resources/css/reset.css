@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* 로고 서체 */
+@font-face {
+    font-family: Jalnan;
+    src: url('../fonts/Jalnan.eot');
+    src: url('../fonts/Jalnan.woff') format('woff');
+}
+
+/* 메인 페이지 title 서체  */
+@font-face {
+    font-family: Staatliches;
+    src: url('../fonts/Staatliches.eot');
+    src: url('../fonts/Staatliches.woff') format('woff');
+}
+
+/* 헤더, 아티클, 타이틀 서체 */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+/* 본문 서체 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;400;600;800&display=swap');
+
+/* 마루부리 서체 */
+@font-face {
+    font-family: 'MaruBuri-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {margin:0; padding:0; box-sizing:border-box;}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:16px; color:#333; font-weight:400;
+    background: #fff;
+}
+h1,h2 {font-family: Staatliches;}
+h3 {font-family: 'Jua', sans-serif;}
+h4, h5, h6 {font-family: 'Noto Sans KR', sans-serif;}
+ul li { list-style:none; }
+a {display:block; color:#333; text-decoration:none; border:0; outline:0;}
+button { display:block; border:none; background:none; }
+img {display:block; border:0; outline:0;}
+.in { 
+    display:block; width:100%; height:40px;
+    border:0; outline:0;
+}
+
+.in-ev-form { 
+    height:45px; padding:10px; 
+    border-radius:20px; border:1px solid #d54c77 
+}
+
+@media screen and (min-width:1450px) {
+    .in-ev-form { width:300px;  margin:15px; }
+    .in-ev-form:hover { border:2px solid #d54c77; }
+    .in-ev-form:focus { background:rgb(252, 232, 235); border:2px solid #d54c77; }
+}
+
+@media screen and (min-width: 1050px) and (max-width : 1449px) {
+    .in-ev-form { width:200px; margin:15px; }
+    .in-ev-form:hover { border:2px solid #d54c77; }
+    .in-ev-form:focus { background:rgb(252, 232, 235); border:2px solid #d54c77; }
+}
+
+@media screen and (min-width: 650px) and (max-width : 1049px) {
+    .in-ev-form { width:220px; margin-top:20px; }
+}
+
+@media screen and (max-width : 649px) {
+    .in-ev-form { width:300px; margin-top:15px; color: #555555; }
+}

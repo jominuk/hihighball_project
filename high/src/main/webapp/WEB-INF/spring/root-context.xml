@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		<!-- MariaDB JDBC DataSource -->
+	 
+	 <!-- 
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.mariadb.jdbc.Driver" />
+		<property name="url" value="jdbc:mariadb://127.0.0.1:3306/hihigh" />
+		<property name="username" value="hihigh" />
+		<property name="password" value="hihigh6183" />
+	</bean>
+	 -->
+	 
+
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.mariadb.jdbc.Driver" />
+		<property name="url" value="jdbc:mariadb://127.0.0.1:3306/hihigh" />
+		<property name="username" value="root" />
+		<property name="password" value="1234" />
+	</bean>
+	 
+
+	
+		<!-- SQLSessionFactory(SQL문 수행을 담당하는 객체)의 dataSource 속성에 dataSource 객체를 주입한다. -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<!-- 파일 업로드를 위한 MutipartResolver 구현체 CommonsMultipartResolver  bean 등록 -->
+	
+ 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	  <property name="maxUploadSize" value="104857600"/>
+	  <property name="maxUploadSizePerFile" value="104857600"/>
+	  <property name="maxInMemorySize" value="104857600"/>
+	  <property name="defaultEncoding" value="utf-8" />
+	</bean>
+	
+	<!-- <bean id="familyMapper" class="org.hihigh.persistance.FamilyMapper" /> -->
+	
+	<mybatis-spring:scan base-package="org.hihigh.persistance" />
+	<context:component-scan base-package="org.hihigh.service" />
+</beans>

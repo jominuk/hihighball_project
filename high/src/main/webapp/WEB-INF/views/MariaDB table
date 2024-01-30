@@ -1,0 +1,307 @@
+CREATE DATABASE hihigh;
+
+USE hihigh;
+
+CREATE TABLE MEMBER (
+    id VARCHAR(50) NOT NULL PRIMARY KEY,
+    pwd VARCHAR(30) NOT NULL,
+    name VARCHAR(50) NOT NULL,
+	age char(10) not NULL,
+    tel VARCHAR(30),
+    email VARCHAR(30),
+	filename VARCHAR(30),
+    reg_date DATE DEFAULT CURRENT_DATE,
+);
+
+
+INSERT INTO MEMBER(id, pwd, name, age)
+VALUES ('admin', '123', '관리자' , '20대');
+insert into member (id, pwd, name, age, tel, email)
+values ('jominuk1025','123','조민욱', '20대' , '01033612489','jominuk1025');
+insert into member (id, pwd, name, age, tel, email)
+values ('jominuk123','123','조민욱', '20대' , '01033612489','jominuk1025@naver.com');
+
+INSERT INTO MEMBER (id, pwd, NAME, age, tel, email)
+VALUES
+  ('user1', 'pwd1', 'John Doe', '40대', '1234567890', 'john@example.com'),
+  ('user2', 'pwd2', 'Jane Doe', '20대', '9876543210', 'jane@example.com'),
+  ('user3', 'pwd3', 'Bob Smith', '50대', '5555555555', 'bob@example.com'),
+  ('user4', 'pwd4', 'Alice Johnson', '30대', '1111111111', 'alice@example.com'),
+  ('user5', 'pwd5', 'Charlie Brown', '40대', '9999999999', 'charlie@example.com'),
+  ('user6', 'pwd6', 'Eve White', '20대', '7777777777', 'eve@example.com'),
+  ('user7', 'pwd7', 'David Black', '60대', '3333333333', 'david@example.com'),
+  ('user8', 'pwd8', 'Grace Lee', '20대', '4444444444', 'grace@example.com'),
+  ('user9', 'pwd9', 'Michael Johnson', '50대', '6666666666', 'michael@example.com'),
+  ('user10', 'pwd10', 'Sara Brown', '40대', '2222222222', 'sara@example.com'),
+  ('user11', 'pwd11', 'Daniel White', '30대', '8888888888', 'daniel@example.com'),
+  ('user12', 'pwd12', 'Emily Davis', '50대', '1212121212', 'emily@example.com'),
+  ('user13', 'pwd13', 'Oliver Johnson', '20대', '3434343434', 'oliver@example.com'),
+  ('user14', 'pwd14', 'Sophia Brown', '60대', '5656565656', 'sophia@example.com'),
+  ('user15', 'pwd15', 'Matthew Black', '30대', '7878787878', 'matthew@example.com'),
+  ('user16', 'pwd16', 'Emma White', '50대', '9090909090', 'emma@example.com'),
+  ('user17', 'pwd17', 'James Davis', '40대', '2323232323', 'james@example.com'),
+  ('user18', 'pwd18', 'Chloe Johnson', '20대', '4545454545', 'chloe@example.com'),
+  ('user19', 'pwd19', 'Jackson Brown', '30대', '6767676767', 'jackson@example.com'),
+  ('user20', 'pwd20', 'Ava White', '50대', '9898989898', 'ava@example.com'),
+  ('user21', 'pwd21', 'Liam Black', '60대', '11112222333', 'liam@example.com'),
+  ('user22', 'pwd22', 'Sophie Brown', '20대', '44445555666', 'sophie@example.com'),
+  ('user23', 'pwd23', 'Mason White', '30대', '77778888999', 'mason@example.com'),
+  ('user24', 'pwd24', 'Olivia Johnson', '60대', '1231231234', 'olivia@example.com'),
+  ('user25', 'pwd25', 'Noah Black', '40대', '5675675678', 'noah@example.com'),
+  ('user26', 'pwd26', 'Emma White', '50대', '9879879876', 'emma@example.com'),
+  ('user27', 'pwd27', 'Liam Davis', '20대', '3453453456', 'liam@example.com'),
+  ('user28', 'pwd28', 'Ava Brown', '30대', '6546546543', 'ava@example.com'),
+  ('user29', 'pwd29', 'Logan Johnson', '40대', '8768768765', 'logan@example.com'),
+  ('user30', 'pwd30', 'Sophia Black', '60대', '2342342345', 'sophia@example.com'),
+  ('user31', 'pwd31', 'Jackson White', '50대', '8768768765', 'jackson@example.com'),
+  ('user32', 'pwd32', 'Aiden Brown', '20대', '4564564567', 'aiden@example.com'),
+  ('user33', 'pwd33', 'Olivia Johnson', '30대', '6786786789', 'olivia@example.com'),
+  ('user34', 'pwd34', 'Lucas White', '40대', '1234123412', 'lucas@example.com'),
+  ('user35', 'pwd35', 'Chloe Black', '50대', '5678567856', 'chloe@example.com'),
+  ('user36', 'pwd36', 'Ethan Brown', '60대', '9876987698', 'ethan@example.com'),
+  ('user37', 'pwd37', 'Harper Johnson', '20대', '3456345634', 'harper@example.com'),
+  ('user38', 'pwd38', 'Mia White', '30대', '6789678967', 'mia@example.com'),
+  ('user39', 'pwd39', 'Carter Black', '40대', '1234123412', 'carter@example.com'),
+  ('user40', 'pwd40', 'Isabella Brown', '50대', '5678567856', 'isabella@example.com'),
+  ('user41', 'pwd41', 'Liam Johnson', '60대', '9876987698', 'liam@example.com'),
+  ('user42', 'pwd42', 'Ella White', '20대', '3456345634', 'ella@example.com'),
+  ('user43', 'pwd43', 'Noah Black', '30대', '6789678967', 'noah@example.com'),
+  ('user44', 'pwd44', 'Ava Brown', '40대', '1234123412', 'ava@example.com'),
+  ('user45', 'pwd45', 'Mason Johnson', '50대', '5678567856', 'mason@example.com'),
+  ('user46', 'pwd46', 'Sophia White', '60대', '9876987698', 'sophia@example.com'),
+  ('user47', 'pwd47', 'Logan Brown', '20대', '3456345634', 'logan@example.com'),
+  ('user48', 'pwd48', 'Oliver Black', '30대', '6789678967', 'oliver@example.com'),
+  ('user49', 'pwd49', 'Chloe Johnson', '40대', '1234123412', 'chloe@example.com'),
+  ('user50', 'pwd50', 'Ethan White', '50대', '5678567856', 'ethan@example.com'),
+  ('user51', 'pwd51', 'Aiden White', '30대', '1111111111', 'aiden@example.com'),
+  ('user52', 'pwd52', 'Liam Brown', '40대', '2222222222', 'liam@example.com'),
+  ('user53', 'pwd53', 'Sophia Johnson', '50대', '3333333333', 'sophia@example.com'),
+  ('user54', 'pwd54', 'Jackson White', '20대', '4444444444', 'jackson@example.com'),
+  ('user55', 'pwd55', 'Olivia Black', '60대', '5555555555', 'olivia@example.com'),
+  ('user56', 'pwd56', 'Lucas Davis', '30대', '6666666666', 'lucas@example.com'),
+  ('user57', 'pwd57', 'Chloe White', '40대', '7777777777', 'chloe@example.com'),
+  ('user58', 'pwd58', 'Ethan Johnson', '50대', '8888888888', 'ethan@example.com'),
+  ('user59', 'pwd59', 'Emma Brown', '20대', '9999999999', 'emma@example.com'),
+  ('user60', 'pwd60', 'Noah White', '30대', '1010101010', 'noah@example.com'),
+  ('user61', 'pwd61', 'Ava Black', '40대', '2020202020', 'ava@example.com'),
+  ('user62', 'pwd62', 'Mia Johnson', '50대', '3030303030', 'mia@example.com'),
+  ('user63', 'pwd63', 'Liam White', '60대', '4040404040', 'liam@example.com'),
+  ('user64', 'pwd64', 'Sophie Black', '20대', '5050505050', 'sophie@example.com'),
+  ('user65', 'pwd65', 'Mason Johnson', '30대', '6060606060', 'mason@example.com'),
+  ('user66', 'pwd66', 'Olivia White', '40대', '7070707070', 'olivia@example.com'),
+  ('user67', 'pwd67', 'Noah Black', '50대', '8080808080', 'noah@example.com'),
+  ('user68', 'pwd68', 'Liam Davis', '60대', '9090909090', 'liam@example.com'),
+  ('user69', 'pwd69', 'Ella Brown', '20대', '1212121212', 'ella@example.com'),
+  ('user70', 'pwd70', 'Ethan Johnson', '30대', '2323232323', 'ethan@example.com'),
+  ('user71', 'pwd71', 'Ava White', '40대', '3434343434', 'ava@example.com'),
+  ('user72', 'pwd72', 'Oliver Black', '50대', '4545454545', 'oliver@example.com'),
+  ('user73', 'pwd73', 'Sophia Davis', '60대', '5656565656', 'sophia@example.com'),
+  ('user74', 'pwd74', 'Mia Brown', '20대', '6767676767', 'mia@example.com'),
+  ('user75', 'pwd75', 'Logan Johnson', '30대', '7878787878', 'logan@example.com'),
+  ('user76', 'pwd76', 'Chloe White', '40대', '8989898989', 'chloe@example.com'),
+  ('user77', 'pwd77', 'Lucas Black', '50대', '9090909090', 'lucas@example.com'),
+  ('user78', 'pwd78', 'Ava Johnson', '60대', '1010101010', 'ava@example.com'),
+  ('user79', 'pwd79', 'Liam White', '20대', '1212121212', 'liam@example.com'),
+  ('user80', 'pwd80', 'Sophie Black', '30대', '2323232323', 'sophie@example.com'),
+  ('user81', 'pwd81', 'Jackson White', '40대', '3434343434', 'jackson@example.com'),
+  ('user82', 'pwd82', 'Emma Brown', '50대', '4545454545', 'emma@example.com'),
+  ('user83', 'pwd83', 'Noah White', '60대', '5656565656', 'noah@example.com'),
+  ('user84', 'pwd84', 'Olivia Black', '20대', '6767676767', 'olivia@example.com'),
+  ('user85', 'pwd85', 'Liam Johnson', '30대', '7878787878', 'liam@example.com'),
+  ('user86', 'pwd86', 'Ava White', '40대', '8989898989', 'ava@example.com'),
+  ('user87', 'pwd87', 'Ethan Johnson', '50대', '9090909090', 'ethan@example.com'),
+  ('user88', 'pwd88', 'Mia Brown', '60대', '1010101010', 'mia@example.com'),
+  ('user89', 'pwd89', 'Logan Johnson', '20대', '1212121212', 'logan@example.com'),
+  ('user90', 'pwd90', 'Chloe White', '30대', '2323232323', 'chloe@example.com'),
+  ('user91', 'pwd91', 'Lucas Black', '40대', '3434343434', 'lucas@example.com'),
+  ('user92', 'pwd92', 'Sophia Davis', '50대', '4545454545', 'sophia@example.com'),
+  ('user93', 'pwd93', 'Mia Brown', '60대', '5656565656', 'mia@example.com'),
+  ('user94', 'pwd94', 'Logan Johnson', '20대', '6767676767', 'logan@example.com'),
+  ('user95', 'pwd95', 'Chloe White', '30대', '7878787878', 'chloe@example.com'),
+  ('user96', 'pwd96', 'Lucas Black', '40대', '8989898989', 'lucas@example.com'),
+  ('user97', 'pwd97', 'Sophia Davis', '50대', '9090909090', 'sophia@example.com'),
+  ('user98', 'pwd98', 'Mia Brown', '60대', '1010101010', 'mia@example.com'),
+  ('user99', 'pwd99', 'Logan Johnson', '20대', '1212121212', 'logan@example.com'),
+  ('user100', 'pwd100', 'Chloe White', '30대', '2323232323', 'chloe@example.com'),
+  ('user101', 'pwd101', 'Aiden White', '40대', '1111111111', 'aiden@example.com'),
+  ('user102', 'pwd102', 'Liam Brown', '20대', '2222222222', 'liam@example.com'),
+  ('user103', 'pwd103', 'Sophia Johnson', '30대', '3333333333', 'sophia@example.com'),
+  ('user104', 'pwd104', 'Jackson White', '50대', '4444444444', 'jackson@example.com'),
+  ('user105', 'pwd105', 'Olivia Black', '60대', '5555555555', 'olivia@example.com'),
+  ('user106', 'pwd106', 'Lucas Davis', '40대', '6666666666', 'lucas@example.com'),
+  ('user107', 'pwd107', 'Chloe White', '50대', '7777777777', 'chloe@example.com'),
+  ('user108', 'pwd108', 'Ethan Johnson', '60대', '8888888888', 'ethan@example.com'),
+  ('user109', 'pwd109', 'Emma Brown', '20대', '9999999999', 'emma@example.com'),
+  ('user110', 'pwd110', 'Noah White', '30대', '1010101010', 'noah@example.com'),
+  ('user111', 'pwd111', 'Ava Black', '40대', '2020202020', 'ava@example.com'),
+  ('user112', 'pwd112', 'Mia Johnson', '50대', '3030303030', 'mia@example.com'),
+  ('user113', 'pwd113', 'Liam White', '60대', '4040404040', 'liam@example.com'),
+  ('user114', 'pwd114', 'Sophie Black', '20대', '5050505050', 'sophie@example.com'),
+  ('user115', 'pwd115', 'Mason Johnson', '30대', '6060606060', 'mason@example.com'),
+  ('user116', 'pwd116', 'Olivia White', '40대', '7070707070', 'olivia@example.com'),
+  ('user117', 'pwd117', 'Noah Black', '50대', '8080808080', 'noah@example.com'),
+  ('user118', 'pwd118', 'Liam Davis', '60대', '9090909090', 'liam@example.com'),
+  ('user119', 'pwd119', 'Ella Brown', '20대', '1212121212', 'ella@example.com'),
+  ('user120', 'pwd120', 'Ethan Johnson', '30대', '2323232323', 'ethan@example.com'),
+  ('user121', 'pwd121', 'Ava White', '40대', '3434343434', 'ava@example.com'),
+  ('user122', 'pwd122', 'Oliver Black', '50대', '4545454545', 'oliver@example.com'),
+  ('user123', 'pwd123', 'Sophia Davis', '60대', '5656565656', 'sophia@example.com'),
+  ('user124', 'pwd124', 'Mia Brown', '20대', '6767676767', 'mia@example.com'),
+  ('user125', 'pwd125', 'Logan Johnson', '30대', '7878787878', 'logan@example.com'),
+  ('user126', 'pwd126', 'Chloe White', '40대', '8989898989', 'chloe@example.com'),
+  ('user127', 'pwd127', 'Lucas Black', '50대', '9090909090', 'lucas@example.com'),
+  ('user128', 'pwd128', 'Ava Johnson', '60대', '1010101010', 'ava@example.com'),
+  ('user129', 'pwd129', 'Liam White', '20대', '1212121212', 'liam@example.com'),
+  ('user130', 'pwd130', 'Sophie Black', '30대', '2323232323', 'sophie@example.com'),
+  ('user131', 'pwd131', 'Jackson White', '40대', '3434343434', 'jackson@example.com'),
+  ('user132', 'pwd132', 'Emma Brown', '50대', '4545454545', 'emma@example.com'),
+  ('user133', 'pwd133', 'Noah White', '60대', '5656565656', 'noah@example.com'),
+  ('user134', 'pwd134', 'Olivia Black', '20대', '6767676767', 'olivia@example.com'),
+  ('user135', 'pwd135', 'Liam Johnson', '30대', '7878787878', 'liam@example.com'),
+  ('user136', 'pwd136', 'Ava White', '40대', '8989898989', 'ava@example.com'),
+  ('user137', 'pwd137', 'Ethan Johnson', '50대', '9090909090', 'ethan@example.com'),
+  ('user138', 'pwd138', 'Mia Brown', '60대', '1010101010', 'mia@example.com'),
+  ('user139', 'pwd139', 'Logan Johnson', '20대', '1212121212', 'logan@example.com'),
+  ('user140', 'pwd140', 'Chloe White', '30대', '2323232323', 'chloe@example.com'),
+  ('user141', 'pwd141', 'Lucas Black', '40대', '3434343434', 'lucas@example.com'),
+  ('user142', 'pwd142', 'Sophia Davis', '50대', '4545454545', 'sophia@example.com'),
+  ('user143', 'pwd143', 'Mia Brown', '60대', '5656565656', 'mia@example.com'),
+  ('user144', 'pwd144', 'Logan Johnson', '20대', '6767676767', 'logan@example.com'),
+  ('user145', 'pwd145', 'Chloe White', '30대', '7878787878', 'chloe@example.com'),
+  ('user146', 'pwd146', 'Lucas Black', '40대', '8989898989', 'lucas@example.com'),
+  ('user147', 'pwd147', 'Sophia Davis', '50대', '9090909090', 'sophia@example.com'),
+  ('user148', 'pwd148', 'Mia Brown', '60대', '1010101010', 'mia@example.com'),
+  ('user149', 'pwd149', 'Logan Johnson', '20대', '1212121212', 'logan@example.com'),
+  ('user150', 'pwd150', 'Chloe White', '30대', '2323232323', 'chloe@example.com'),
+  ('user151', 'pwd151', 'John Doe', '40대', '1234567890', 'john.doe@example.com'),
+  ('user152', 'pwd152', 'Jane Doe', '20대', '9876543210', 'jane.doe@example.com'),
+  ('user153', 'pwd153', 'Bob Smith', '50대', '5555555555', 'bob.smith@example.com'),
+  ('user154', 'pwd154', 'Alice Johnson', '30대', '1111111111', 'alice.johnson@example.com'),
+  ('user155', 'pwd155', 'Charlie Brown', '40대', '9999999999', 'charlie.brown@example.com'),
+  ('user156', 'pwd156', 'Eve White', '20대', '7777777777', 'eve.white@example.com'),
+  ('user157', 'pwd157', 'David Black', '60대', '3333333333', 'david.black@example.com'),
+  ('user158', 'pwd158', 'Grace Lee', '20대', '4444444444', 'grace.lee@example.com'),
+  ('user159', 'pwd159', 'Michael Johnson', '50대', '6666666666', 'michael.johnson@example.com'),
+  ('user160', 'pwd160', 'Sara Brown', '40대', '2222222222', 'sara.brown@example.com'),
+  ('user161', 'pwd161', 'Daniel White', '30대', '8888888888', 'daniel.white@example.com'),
+  ('user162', 'pwd162', 'Emily Davis', '50대', '1212121212', 'emily.davis@example.com'),
+  ('user163', 'pwd163', 'Oliver Johnson', '20대', '3434343434', 'oliver.johnson@example.com'),
+  ('user164', 'pwd164', 'Sophia Brown', '60대', '5656565656', 'sophia.brown@example.com'),
+  ('user165', 'pwd165', 'Matthew Black', '30대', '7878787878', 'matthew.black@example.com'),
+  ('user166', 'pwd166', 'Emma White', '50대', '9090909090', 'emma.white@example.com'),
+  ('user167', 'pwd167', 'James Davis', '40대', '2323232323', 'james.davis@example.com'),
+  ('user168', 'pwd168', 'Chloe Johnson', '20대', '4545454545', 'chloe.johnson@example.com'),
+  ('user169', 'pwd169', 'Jackson Brown', '30대', '6767676767', 'jackson.brown@example.com'),
+  ('user170', 'pwd170', 'Ava White', '50대', '9898989898', 'ava.white@example.com'),
+  ('user171', 'pwd171', 'Liam Black', '60대', '11112222333', 'liam.black@example.com'),
+  ('user172', 'pwd172', 'Sophie Brown', '20대', '44445555666', 'sophie.brown@example.com'),
+  ('user173', 'pwd173', 'Mason White', '30대', '77778888999', 'mason.white@example.com'),
+  ('user174', 'pwd174', 'Olivia Johnson', '60대', '1231231234', 'olivia.johnson@example.com'),
+  ('user175', 'pwd175', 'Noah Black', '40대', '5675675678', 'noah.black@example.com'),
+  ('user176', 'pwd176', 'Emma White', '50대', '9879879876', 'emma.white@example.com'),
+  ('user177', 'pwd177', 'Liam Davis', '20대', '3453453456', 'liam.davis@example.com'),
+  ('user178', 'pwd178', 'Ava Brown', '30대', '6546546543', 'ava.brown@example.com'),
+  ('user179', 'pwd179', 'Logan Johnson', '40대', '8768768765', 'logan.johnson@example.com'),
+  ('user180', 'pwd180', 'Sophia Black', '60대', '2342342345', 'sophia.black@example.com'),
+  ('user181', 'pwd181', 'Jackson White', '50대', '8768768765', 'jackson.white@example.com'),
+  ('user182', 'pwd182', 'Emma Davis', '40대', '1111111111', 'emma.davis@example.com'),
+  ('user183', 'pwd183', 'Mia Johnson', '20대', '2222222222', 'mia.johnson@example.com'),
+  ('user184', 'pwd184', 'Ethan Brown', '50대', '3333333333', 'ethan.brown@example.com'),
+  ('user185', 'pwd185', 'Isabella White', '30대', '4444444444', 'isabella.white@example.com'),
+  ('user186', 'pwd186', 'Aiden Black', '60대', '5555555555', 'aiden.black@example.com'),
+  ('user187', 'pwd187', 'Mila Davis', '40대', '6666666666', 'mila.davis@example.com'),
+  ('user188', 'pwd188', 'Lucas Johnson', '20대', '7777777777', 'lucas.johnson@example.com'),
+  ('user189', 'pwd189', 'Lily Brown', '50대', '8888888888', 'lily.brown@example.com'),
+  ('user190', 'pwd190', 'Caleb White', '30대', '9999999999', 'caleb.white@example.com'),
+  ('user191', 'pwd191', 'Madison Black', '40대', '1010101010', 'madison.black@example.com'),
+  ('user192', 'pwd192', 'Jackson White', '60대', '1212121212', 'jackson.white@example.com'),
+  ('user193', 'pwd193', 'Landon Davis', '20대', '1313131313', 'landon.davis@example.com'),
+  ('user194', 'pwd194', 'Scarlett Brown', '30대', '1414141414', 'scarlett.brown@example.com'),
+  ('user195', 'pwd195', 'Grayson Johnson', '50대', '1515151515', 'grayson.johnson@example.com'),
+  ('user196', 'pwd196', 'Penelope White', '40대', '1616161616', 'penelope.white@example.com'),
+  ('user197', 'pwd197', 'Daniel Black', '60대', '1717171717', 'daniel.black@example.com'),
+  ('user198', 'pwd198', 'Zoe Davis', '30대', '1818181818', 'zoe.davis@example.com'),
+  ('user199', 'pwd199', 'Elijah Brown', '50대', '1919191919', 'elijah.brown@example.com'),
+  ('user200', 'pwd200', 'Aria White', '20대', '2020202020', 'aria.white@example.com');
+
+UPDATE MEMBER
+SET tel = CONCAT('010', LPAD(FLOOR(RAND() * 1000000000), 8, '0'));
+
+
+CREATE TABLE board (
+    bnum INT AUTO_INCREMENT PRIMARY KEY,
+    id VARCHAR(30) NOT NULL,
+    subject VARCHAR(100) NOT NULL,
+    contents VARCHAR(1000) NOT NULL,
+    postfile VARCHAR(30),
+	profile VARCHAR(50),
+    count INT DEFAULT 0,
+    re_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	 FOREIGN KEY (id) REFERENCES member(id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE liky (
+  id VARCHAR(20) NOT NULL ,
+  bnum INT NOT NULL,
+  state INT DEFAULT 0,
+  PRIMARY KEY (id, bnum),
+  FOREIGN KEY (id) REFERENCES member(id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE reply (
+    renum INT AUTO_INCREMENT PRIMARY KEY,
+    bnum INT NOT NULL,
+    id VARCHAR(20) NOT NULL,
+    recontents VARCHAR(50) NOT NULL,
+    redate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (bnum) REFERENCES board(bnum) ON DELETE CASCADE,
+    FOREIGN KEY (id) REFERENCES member(id) ON DELETE CASCADE
+);
+
+
+create table event(
+  id varchar(15) not null comment'회원 id',
+  company varchar(10) not null comment'회사',
+  name varchar(10)  comment'이름',
+  tel varchar(13)  comment'회원 번호',
+  num varchar(5)  comment'인원',
+  datech varchar(20)  comment'날짜',
+  reservation char(10) DEFAULT '0',
+  PRIMARY KEY(id, company),
+  FOREIGN KEY (id) REFERENCES member (id) ON DELETE CASCADE
+);
+
+
+
+INSERT INTO EVENT (id, company, name, tel, num, datech)
+SELECT
+  M.id,
+  CASE FLOOR(RAND() * 5)
+    WHEN 0 THEN '발그레'
+    WHEN 1 THEN '퍼지'
+    WHEN 2 THEN '핌리코'
+    WHEN 3 THEN '네셔널'
+    WHEN 4 THEN '지오'
+  END AS company,
+  LEFT(M.name, 10),
+  COALESCE(LPAD(M.tel, 11, '010'), '00000000000'),
+  CAST(FLOOR(RAND() * 11) AS CHAR(2)),
+  CURRENT_DATE
+FROM
+  MEMBER M
+ORDER BY RAND()
+LIMIT 190;
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,318 @@
+@charset "utf-8";
+
+@keyframes pro-frist-box {
+    0% { transform:translateY(-100px); letter-spacing:10px; opacity:0; }
+    100% { transform:translateY(0px); letter-spacing:0; opacity:1; }
+}
+
+@keyframes pro-second-box {
+    0% { transform:translateX(-600px); opacity:0; }
+    100% { transform:translateX(0px); opacity:1; }
+}
+@keyframes pro-third-box {
+    0% { transform:translateX(600px); opacity:0; }
+    100% { transform:translateX(0px); opacity:1; }
+}
+
+@keyframes pro-fourth-box {
+    0% { transform:translateY(100px); letter-spacing:10px; opacity:0; }
+    100% { transform:translateY(0px); letter-spacing:0; opacity:1; }
+}
+
+body { overflow-x: hidden;}
+@media screen and (min-width : 1450px) {
+    .pro-tech-bg { 
+        width:600px; height:400px;
+        background:url('../imgs/pr-image1-fhd.jpg') no-repeat center center;
+        background-size:cover;
+        border-radius:15px; 
+        box-shadow:10px 6px 6px rgba(133, 128, 128, 0.5);
+        animation:pro-second-box 2s;
+    }
+    .pro-tech-product { 
+        width:600px; height:400px;  
+        animation:pro-third-box 2s; 
+    }
+    .pro-tech-product , .pro-tech-txt { color:#979797; }
+    .pro-tech-txt { margin-top:40px; text-align:center;}
+
+    #pro-tech-info {
+        display:flex; justify-content:space-around;
+        width:600px; height:200px; margin-top:100px;
+        text-align:center;  background:#f4f4f6; border-radius:15px;
+    }
+    .pro-item {
+        width:125px; height:125px;  margin-top:25px;
+        background:#ffffff; border-radius:50%;  
+    }
+    .pro-item-bg1 { background:url('../imgs/pr-circle-bg1.jpg')no-repeat center center;}
+    .pro-item-bg2 { background:url('../imgs/pr-circle-bg2.jpg')no-repeat center center;}
+    .pro-item-bg3 { background:url('../imgs/pr-circle-bg3.jpg')no-repeat center center;}
+
+    .pro-pdt-content {
+        display:flex; justify-content:space-around;
+        width:1300px; margin:60px auto;  
+    }
+    .pro-pdt-info {
+        position:relative; 
+        width:300px; height:500px; margin:40px auto;
+        background:#574e46; border:2px #9a948f solid; border-radius:15px;
+        opacity:0.7;  overflow:hidden;
+    }
+    .pro-pdt-bg {
+        width:230px; height:230px; margin:130px auto;
+        border-radius:50%;
+        transition:all 0.4s ease-in 0.2s;
+    }
+    .pro-pdt-bg1 { 
+        background:url('../imgs/pr-card-bg1.jpg') no-repeat center center;
+        background-size:cover;
+    }
+    .pro-pdt-bg2 { 
+        background:url('../imgs/pr-card-bg2.jpg') no-repeat center center;
+        background-size:cover;
+    }
+    .pro-pdt-bg3 { 
+        background:url('../imgs/pr-card-bg3.jpg') no-repeat center center;
+        background-size:cover;
+    }
+    .pro-pdt-txt {
+        position:absolute; left:40px; top:300px;
+        width:220px; height:250px; opacity:0;
+        transform:translateY(100px); text-align: center;
+        transition:all 0.7s ease-in 0.4s;
+    }
+    .pro-pdt-txt h4 {
+        margin-top:80px;
+        text-align:center; font-size:22px; color:white;;
+        opacity:1;
+        transition:all 0.4s ease-in 0.2s;
+     }
+    .pro-pdt-txt p{ margin-top:20px; text-align:center;  color:#f6f6f6;}
+    .pro-btn { margin:30px auto;}
+
+    .pro-pdt-info:hover .pro-pdt-bg { 
+        transform:translateY(-60px); opacity:1;
+    }
+    .pro-pdt-info:hover .pro-pdt-txt h4 { 
+        transform:translateY(-260px); opacity:1;
+    }
+    .pro-pdt-info:hover .pro-pdt-txt {
+        transform:translateY(-100px); opacity:1;
+    }
+    .pro-pdt-info:hover { opacity:1;}
+}
+
+@media screen and (min-width: 1050px) and (max-width : 1449px) {
+    .pro-tech-bg { 
+        width:480px; height:310px; 
+        border-radius:15px;
+        background:url('../imgs/pr-image1-hd.jpg') no-repeat center center;
+        background-size:cover;
+        box-shadow:10px 6px 6px rgba(133, 128, 128, 0.5);
+        animation:pro-second-box 2s;
+    }
+    .pro-tech-product {
+        width:435px; height:310px;  margin:0 30px auto;
+        animation:pro-third-box 2s;
+    }
+    .pro-tech-txt { 
+        margin-top:20px; 
+        color:#979797; line-height:25px; 
+    }
+    #pro-tech-info {
+        display:flex; justify-content:space-around;
+        width:440px; height:200px; margin-top:50px; 
+        text-align:center; background:#f4f4f6; border-radius:15px;  
+    }
+    .pro-item {
+        width:120px; height:110px; margin-top:30px;
+        background:#fff; border-radius:50%;  
+    }
+    .pro-item-bg1 { background:url('../imgs/pr-circle-bg1.jpg')no-repeat center center;}
+    .pro-item-bg2 { background:url('../imgs/pr-circle-bg2.jpg')no-repeat center center;}
+    .pro-item-bg3 { background:url('../imgs/pr-circle-bg3.jpg')no-repeat center center;}
+
+    .pro-pdt-content { 
+        display:flex; justify-content:space-between;
+        width:940px; margin: 60px auto 0; 
+    }
+
+    .pro-pdt-info {
+        position:relative;
+        width:270px; height:450px; margin:30px 0;
+        background:#574e46; border:2px #9a948f solid; border-radius:15px;
+        opacity:0.7;
+    }
+
+    .pro-pdt-bg {
+        width:200px; height:210px; margin:120px auto;
+        border-radius:50%; 
+        transition:all 0.4s ease-in 0.2s;
+    }
+    .pro-pdt-bg1 { 
+        background:url('../imgs/pr-card-bg1.jpg') no-repeat center center;
+        background-size:cover;
+    }
+    .pro-pdt-bg2 { 
+        background:url('../imgs/pr-card-bg2.jpg') no-repeat center center;
+        background-size:cover;
+    }
+    .pro-pdt-bg3 { 
+        background:url('../imgs/pr-card-bg3.jpg') no-repeat center center;
+        background-size:cover;
+    }
+
+    .pro-pdt-txt { 
+        position:absolute; left:20px; top:260px;
+        width:230px; opacity:0; 
+        transform:translateY(100px); 
+        transition:all 0.7s ease-in 0.4s;
+    }
+
+    .pro-pdt-txt h4 {  font-size:20px; text-align:center; color:#d54c77; }
+    .pro-pdt-txt p { margin-top:10px; text-align:center; color:#f6f6f6;}
+   
+    .pro-pdt-info:hover .pro-pdt-bg { 
+        transform:translateY(-100px); opacity:1;
+    }
+   
+    .pro-pdt-info:hover .pro-pdt-txt  { 
+        transform:translateY(0px); opacity:1;
+    }
+    .pro-pdt-info:hover { opacity:1; }
+
+    .pro-btn { display:flex; justify-content:center; margin:25px auto; }
+
+}
+
+@media screen and (min-width: 650px) and (max-width : 1049px) {
+   
+    .pro-tech-bg {
+        width:520px; height:310px; margin:0 auto;
+        background:url('../imgs/pr-image1-tav.jpg') no-repeat center center;
+        background-size:cover;
+        border-radius:15px; 
+    }
+
+    .pro-tech-txt { padding-top:40px; }
+    .pro-tech-product { text-align:center; }
+    .pro-tech-txt, .pro-tech-product {  
+        color:#979797; text-align:center; line-height:25px;
+    }
+    
+    #pro-tech-info { 
+        display:flex; justify-content:space-around; align-items:center;
+        height:200px; margin-top:40px;
+        background:#f4f4f6;  border-radius:15px; 
+    }
+
+    .pro-item {
+        width:120px; height:110px; 
+        background:#ffffff; border-radius:50%;  
+    }
+    .pro-item-bg1 { background:url('../imgs/pr-circle-bg1.jpg')no-repeat center center;}
+    .pro-item-bg2 { background:url('../imgs/pr-circle-bg2.jpg')no-repeat center center;}
+    .pro-item-bg3 { background:url('../imgs/pr-circle-bg3.jpg')no-repeat center center;}
+
+    .pro-pdt-info {
+        display:flex;
+        position:relative;
+        width:620px; height:300px; margin:40px auto;
+        background:#574e46; border:2px #9a948f solid; border-radius:15px;
+        opacity:0.7;
+    }
+
+    .pro-pdt-bg {
+        width:220px; height:220px; margin:40px auto;
+        border-radius:50%; 
+    }
+
+    .pro-pdt-bg1 { 
+        background:url('../imgs/pr-card-bg1.jpg') no-repeat center center;
+        background-size:cover;
+    }
+    .pro-pdt-bg2 {
+        position:absolute; right:30px;  top:0; 
+        background:url('../imgs/pr-card-bg2.jpg') no-repeat center center;
+        background-size:cover;  
+    }
+    .pro-pdt-bg3 { 
+        background:url('../imgs/pr-card-bg3.jpg') no-repeat center center;
+        background-size:cover;
+    }
+
+    .pro-pdt-txt { margin:50px auto 40px; }
+    .pro-pdt-info h4 { font-size:24px; color:#d54c77; text-align:center;  }
+    .pro-pdt-txt p { 
+        width:230px; margin-top:20px;
+        color:#f6f6f6; text-align:center;  
+    }
+
+    .pro-pdt-sm-txt { position:absolute; left:60px; top:0; }
+    .pro-btn { display:flex; justify-content:center; }
+}
+
+@media screen and (max-width : 649px) {
+    .pro-tech-bg { 
+        height:320px; margin:0 auto; 
+        background:url('../imgs/pr-image1-mb.jpg') no-repeat center center;
+        background-size:cover;
+        border-radius:15px;
+     }
+
+    .pro-tech-product { margin:0 auto; }
+
+    .pro-tech-txt { width:340px; margin:30px auto 0; text-align:center;} 
+
+    #pro-tech-info { 
+        display:flex; justify-content:space-around; align-items:center;
+        height:200px; margin:30px auto 0; 
+        text-align:center; background:#f4f4f6; 
+        border-radius:15px;  
+    }
+
+    .pro-item {
+        width:90px; height:90px; 
+        background:#fff; border-radius:50%;  
+    }
+
+    .pro-item-bg1 { background:url('../imgs/pr-cirlce-bg1-mb.jpg')no-repeat center center;}
+    .pro-item-bg2 { background:url('../imgs/pr-cirlce-bg2-mb.jpg')no-repeat center center;}
+    .pro-item-bg3 { background:url('../imgs/pr-cirlce-bg3-mb.jpg')no-repeat center center;}
+
+    .pro-tech-product, .pro-tech-info p  { line-height:24px; color:#979797; }
+
+    .pro-pdt-info {
+        width:300px; height:480px; margin:15px auto;
+        background:#919191;
+        border:3px #ffffff solid; border-radius:15px;
+    }
+
+    .pro-pdt-bg {
+        width:230px; height:220px; margin:30px auto;
+        border-radius:50%; 
+    }
+
+    .pro-pdt-bg1 { 
+        background:url('../imgs/pr-card-bg1.jpg') no-repeat center center;
+        background-size:cover;
+    }
+    .pro-pdt-bg2 {
+        background:url('../imgs/pr-card-bg2.jpg') no-repeat center center;
+        background-size:cover;
+    }
+    .pro-pdt-bg3 { 
+        background:url('../imgs/pr-card-bg3.jpg') no-repeat center center;
+        background-size:cover;
+    }
+
+    .pro-pdt-txt { width:250px; height:150px; margin:0 auto;}
+    .pro-pdt-txt h4 { font-size:26px; color:#d54c77; text-align:center; }
+    .pro-pdt-txt p { 
+        width:220px; margin:10px auto 0; 
+        color:#f6f6f6; text-align:center;
+    }
+    .pro-btn { display:flex; justify-content:center; }
+
+}

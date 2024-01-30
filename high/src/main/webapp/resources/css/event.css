@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+/* ==================== 탭메뉴 ==================== */
+.ev-cnt-bal > .ev-cnt-bg { background:url(../imgs/ev-bal.jpeg)no-repeat center center; background-size:cover; }
+.ev-cnt-fuz > .ev-cnt-bg { background:url(../imgs/ev-fuz.jpeg)no-repeat center center; background-size:cover; }
+.ev-cnt-pim > .ev-cnt-bg { background:url(../imgs/ev-pim.jpg)no-repeat center center; background-size:cover; }
+
+.container-ev { position:relative; background:#f3f3f3; border-radius:10px; }
+.container-ev > input, .container-ev > label { position:absolute; top:0; z-index:99; }
+.container-ev > input { opacity:0; }
+
+.container-ev > label {
+    display:block; margin-top:10px;
+    color:#555555; font-weight:bold; text-align:center; line-height:40px;
+    text-transform:uppercase; text-shadow:1px 1px 1px rgba(255,255,255,0.3);
+    background:linear-gradient(to bottom, #bec3d1, #d6dced);
+    border-radius:5px 5px 0 0;
+}
+
+.container-ev > input:checked + label { top:0; background:#fff; }
+.container-ev > input:checked + label::after { background:#fff; }
+
+.container-ev > label.tab-label-2 { z-index:2; }
+.container-ev > label.tab-label-3 { z-index:1; }
+.container-ev > input:checked + label { z-index:3; }
+
+.ev-cnt {
+    position:relative; 
+    width:100%; 
+    background:#fff; overflow:hidden;
+}
+.ev-cnt-bal, .ev-cnt-fuz, .ev-cnt-pim {
+    position:absolute; top:0;
+    height:100%; 
+    background:#fff; opacity:0; overflow:hidden; z-index:1;
+}
+
+.container-ev input.tab-selector-1:checked ~ .ev-cnt > .ev-cnt-bal,
+.container-ev input.tab-selector-2:checked ~ .ev-cnt > .ev-cnt-fuz,
+.container-ev input.tab-selector-3:checked ~ .ev-cnt > .ev-cnt-pim {
+    opacity:1; z-index:99;
+    transition:all 0.3s ease-in 0.2s;
+}
+
+.ev-cnt-bg { border-radius:10px }
+.ev-cnt-txt { text-align:center; }
+
+.ev-cnt-info { background:#ebebeb;}
+.ev-cnt-info > div { text-align:left; }    
+.ev-dd { margin-left:25px; font-size:16px; }
+.ev-ff { margin-left:17px; font-size:16px; }
+
+
+/* ==================== 지원서 ==================== */
+
+.ev-contact-form { background:#fff; } 
+.ev-contact-check { display:flex; justify-content:center; }
+.ev-contact-info { display:flex; flex-wrap:wrap; text-align:center;}
+
+.container-ev-flex {
+    justify-content:center; align-items:center;
+    background:#d6dced; border-radius:10px;
+}
+
+.ev-contact { text-align:center; }
+.ev-contact-form { border-radius:10px; }
+.ev-contact-info li:last-child { width:100%; display:flex; justify-content:center; }
+
+
+.ev-contact-check > input { accent-color:#d54c77; }
+input[type='date']::before { content:attr(data-placeholder); width:100%; }
+input[type='date']:focus::before,
+input[type='date']:valid::before {
+   display:none;
+}
+
+
+/* = = = = = = =  = = = = = = = = = = F H D  = = = = = = = = = = = = = = = = = = =*/
+@media screen and (min-width:1450px) {
+/* ==================== 탭메뉴 ==================== */
+    .container-ev > input, .container-ev > label {
+        width:220px; height:60px; padding:10px; 
+        cursor:pointer;
+    }
+    
+    .container-ev > label { font-size:22px; }
+    .container-ev > label::after { /* 탭 버튼 내부 아래에 생기는 바 */
+        content:'';
+        display:block; 
+        position:absolute; left:0; bottom:-10px;
+        width:100%; height:10px;
+        background:#fff;
+    }
+    
+    .tab-selector-1, .tab-label-1 { left:10px; }
+    .tab-selector-2, .tab-label-2 { left:235px; }
+    .tab-selector-3, .tab-label-3 { left:460px; }
+
+    .container-ev > input:hover + label { top:-10px; background:#d6dced; color:#d54c77; }
+    .container-ev > input:hover + label::after { background:#d6dced; }
+
+    .ev-cnt { top:60px; height:510px; }
+    .ev-cnt-bal, .ev-cnt-fuz, .ev-cnt-pim { display:flex; padding:60px; }
+
+    .ev-cnt-bg { width:670px; height:390px; }
+    .ev-cnt-txt { width:430px; height:390px; margin-left:60px; }
+    .ev-cnt-txt > h4 { font-size:35px; }
+    .ev-cnt-txt > p { padding-top:25px; }
+
+    .ev-cnt-info {     
+        height:250px; margin-top:20px; padding:30px;
+        border-left:5px solid #e2abbd; border-radius:0 10px 10px 0;
+    }
+    .ev-cnt-info > div { font-size:24px; padding:4px; }    
+   
+   .reserbtn{
+   width:80px; height:40px; margin:-40px 0 0 300px; 
+   }
+
+
+/* ========================= 지원서 ========================= */
+
+    .container-ev-flex { display:flex; width:1300px; padding:50px; }
+    .ev-contact { width:340px; margin-right:80px; padding:30px; text-align:center; }
+    .ev-contact h4 { font-size:35px; }
+    .ev-contact p { margin-top:35px; line-height:40px; }
+    .ev-contact-form { width:755px; padding:50px; border-radius:10px; }
+    .ev-contact-check > input[type="radio"] { margin-left:60px; }
+    .ev-contact-info { margin-top:15px; }
+    .ev-contact-info li { width:50%; }
+    .ev-contact-info li > .ev-btn { margin-top:30px; }
+    
+    .join-radio:first-child { margin-left:90px; }
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = H D  = = = = = = = = = = = = = = = = = = = */
+@media screen and (min-width: 1050px) and (max-width : 1449px) {
+/* ==================== 탭메뉴 ==================== */
+    .container-ev > input, .container-ev > label {
+        width:220px; height:60px; margin-right:5px; padding:10px; 
+        cursor:pointer;
+    }
+
+    .container-ev > label { font-size:22px; }
+    .container-ev > label::after { /* 탭 버튼 내부 아래에 생기는 바 */
+        content:'';
+        display:block; 
+        position:absolute; left:0; bottom:-8px;
+        width:100%; height:10px;
+        background:#fff;
+    }
+
+    .tab-selector-1, .tab-label-1 { left:10px; }
+    .tab-selector-2, .tab-label-2 { left:235px; }
+    .tab-selector-3, .tab-label-3 { left:460px; }
+
+    .container-ev > input:hover + label { top:-10px; background:#d6dced; color: #d54c77; }
+    .container-ev > input:hover + label::after { background:#d6dced; }
+
+    .ev-cnt { top:60px; height:490px; }
+    .ev-cnt-bal, .ev-cnt-fuz, .ev-cnt-pim { display:flex; padding:50px; }
+
+    .container-ev input.tab-selector-1:checked ~ .ev-cnt > .ev-cnt-bal,
+    .container-ev input.tab-selector-2:checked ~ .ev-cnt > .ev-cnt-fuz,
+    .container-ev input.tab-selector-3:checked ~ .ev-cnt > .ev-cnt-pim {
+        opacity:1; z-index:99;
+        transition:all 0.3s ease-in 0.2s;
+    }
+
+    .ev-cnt-bg { width:440px; height:390px; }
+
+    .ev-cnt-txt { width:330px; height:390px; margin-left:40px; }
+    .ev-cnt-txt > h4 { font-size:28px; }
+    .ev-cnt-txt > p { padding-top:20px; }
+
+    .ev-cnt-info {     
+        height:230px; margin-top:30px; 
+        border-left:5px solid #e2abbd; border-radius:0 10px 10px 0;
+    }
+    .ev-cnt-info > div { font-size:24px; padding:4px; }
+    
+     .reserbtn{
+   width:80px; height:40px; margin-left:200px;
+   }    
+
+
+    /* ==================== 지원서 ==================== */
+
+    .container-ev-flex { display:flex; width:1000px; padding:40px; }
+    .ev-contact { width:310px; margin-right:10px; padding:30px; }
+    .ev-contact h4 { font-size:28px; }
+    .ev-contact  p { margin-top:25px; line-height:40px; }
+    .ev-contact-form { width:700px; padding:50px; }
+    .ev-contact-check > input[type="radio"] { margin-left:60px; }
+
+    .ev-contact-info { margin-top:15px; }
+    .ev-contact-info li { width:50%; }
+    .ev-contact-info li > .ev-btn { margin-top:30px; }
+    
+    .join-radio:first-child { margin-left:80px; }
+   .ev-contact-info { display:flex; flex-wrap:wrap; margin-left:80px;}
+    }
+
+
+
+/* = = = = = = = = = = = = = = = = = T B  = = = = = = = = = = = = = = = = = = =*/
+
+@media screen and (min-width: 650px) and (max-width : 1049px) {
+/* ==================== 탭메뉴 ==================== */
+    .container-ev > input, .container-ev > label { width:160px; height:40px; margin-right:5px; }
+
+    .container-ev > label { font-size:18px; }
+
+    .tab-selector-1, .tab-label-1 { left:10px; }
+    .tab-selector-2, .tab-label-2 { left:175px; }
+    .tab-selector-3, .tab-label-3 { left:340px; }
+
+    .ev-cnt { top:40px; height:640px; }
+    .ev-cnt-bal, .ev-cnt-fuz, .ev-cnt-pim { left:0; padding:20px; }
+
+    .container-ev input.tab-selector-1:checked ~ .ev-cnt > .ev-cnt-bal,
+    .container-ev input.tab-selector-2:checked ~ .ev-cnt > .ev-cnt-fuz,
+    .container-ev input.tab-selector-3:checked ~ .ev-cnt > .ev-cnt-pim {
+        opacity:1; z-index:99;
+        transition:all 0.3s ease-in 0.2s;
+    }
+
+    .ev-cnt-bg  { width:540px; height:350px; }
+
+    .ev-cnt-txt { width:540px; height:390px; margin-top:20px; }
+    .ev-cnt-txt > h4 { font-size:28px; }
+    .ev-cnt-txt > p { padding-top:15px; }
+
+    .ev-cnt-info {     
+        display:flex; flex-wrap:wrap;
+        margin-top:30px; padding:10px;
+        border-left:5px solid #e2abbd; border-radius:0 10px 10px 0;
+    }
+    .ev-cnt-info > div { width:50%; font-size:20px; padding:4px; }   
+    
+    .reserbtn{
+   width:80px; height:40px; margin-left:200px;
+   }     
+
+
+    /* ==================== 지원서 ==================== */
+
+    .container-ev-flex { width:600px; margin:0 auto; padding:10px; }
+    .ev-contact { padding:10px; }
+    .ev-contact h4 { font-size:28px; }
+    .ev-contact p { margin-top:10px; line-height:20px; }
+    .ev-contact-form { margin-top:10px; padding:50px; }
+    .ev-contact-check > input[type="radio"] { margin-left:10px; }
+    .ev-contact-info { margin-top:15px; justify-content:space-between; }
+    .ev-contact-info li > .ev-btn { margin-top:20px; }
+    
+    .join-radio:first-child { margin-left:20px; }
+    }
+
+/* = = = = = = =  = = = = = = = = = = M B  = = = = = = = = = = = = = = = = = = = */
+
+@media screen and (max-width : 649px) {
+/* ==================== 탭메뉴 ==================== */
+    .container-ev > input, .container-ev > label { width:90px; height:40px; margin-right:5px; }
+
+    .tab-selector-1, .tab-label-1 { left:5px; }
+    .tab-selector-2, .tab-label-2 { left:100px; }
+    .tab-selector-3, .tab-label-3 { left:195px; }
+
+    .ev-cnt { top:40px; height:580px; padding:5px; }
+    .ev-cnt-bal, .ev-cnt-fuz, .ev-cnt-pim { left:0; padding:5px; }
+
+    .container-ev input.tab-selector-1:checked ~ .ev-cnt > .ev-cnt-bal,
+    .container-ev input.tab-selector-2:checked ~ .ev-cnt > .ev-cnt-fuz,
+    .container-ev input.tab-selector-3:checked ~ .ev-cnt > .ev-cnt-pim {
+        opacity:1; z-index:99;
+        transition:all 0.3s ease-in 0.2s;
+    }
+
+    .ev-cnt-bg  { width:320px; height:200px; }
+
+    .ev-cnt-txt { width:320px; height:200px; margin-top:20px; }
+    .ev-cnt-txt h4 { font-size:24px; }
+    .ev-cnt-txt p { padding-top:15px; }
+
+    .ev-cnt-info { margin-top:30px; padding:20px; border-radius:10px; }
+    .ev-cnt-info > div { height:40px; font-size:18px; }    
+    
+    .reserbtn{
+   width:80px; height:40px; margin:-40px 0 0 200px;
+   }    
+
+
+    /* ==================== 지원서 ==================== */
+
+    .container-ev-flex { width:340px; margin:15px auto; padding:5px; }
+    .ev-contact { padding:15px; text-align:center; }
+    .ev-contact h4 { font-size:24px; }
+    .ev-contact p { margin-top:10px; }
+    .ev-contact-form { margin-top:15px; padding:20px; }
+    .ev-contact-check >label { margin:0 10px; }
+
+    .ev-contact-info { margin-top:10px; justify-content:center; }
+    .ev-contact-info li > .ev-btn { margin-top:20px; }
+
+    }
+
+

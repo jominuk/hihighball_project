@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.hihigh.persistance.EventMapper">
+
+
+	<select id="eventlist" resultType="org.hihigh.domain.EventVO">
+		select * from event
+	</select>
+
+	
+	<insert id="insertevent" parameterType="org.hihigh.domain.EventVO">
+		INSERT INTO EVENT(id, company, NAME, tel, num, datech)
+	    values (#{id}, #{company}, #{name}, #{tel}, #{num}, #{datech})
+	</insert>
+
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

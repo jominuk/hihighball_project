@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+    #re-container > li:nth-child(2) {
+       display: flex; justify-content: space-between;
+       font-size: 14px;
+   }
+   #re-container > li:nth-child(5) { padding: 20px 0; }
+   
+   .reply-da {display: flex; justify-content: space-between;}
+    .re-in {border: none; outline: none;}
+   
+   
+   @media screen and ( min-width : 800px ) {
+      .Contai { display:flex; width:750px; margin: 0 auto;}
+       #re-container{ width: 600px; margin: 60px auto; }
+       #re-container > li:nth-child(1) { padding: 20px 0; font-size: 40px; }
+       
+       .re-img {
+           width:100%; height: 400px; margin: 50px 0;
+           background-size: cover;
+       }
+       .rc-detailbtn{
+           display: flex; justify-content: space-around; padding: 40px 0 0 0;
+       }
+       
+       #heart {cursor: pointer;}
+       .heart1{
+         position: fixed; top: 600px; padding: 10px;
+         border: 3px solid hotpink; border-radius: 10px;
+         text-align: center;
+        }
+      .heart1 > p {margin-top:20px;}
+      
+      .line { width: 600px; margin:0 auto; border: 1px solid #eee;}
+      
+       .reply-in {
+         width: 100%; height: 100px; padding: 15px;
+         border: 1px solid salmon;
+         background: #eee; border-radius: 10px;
+         resize: none; outline: none;
+      }
+      .re-input {width: 100px; padding: 0 0 10px 10px; border: none; outline: none; }
+       .btn-rePost{ margin: 10px 0 0 470px;}
+       
+       
+       #reply {
+         width:  600px; height: 150px;
+         padding: 10px 20px; margin:20px auto 0;
+          border: 2px solid #eee; border-radius: 15px;
+       }
+       #reply > p { width: 100%; height: 70px; padding-top: 10px;}
+       
+       .reply-Btn{ display: flex; justify-content: end; width: 100%;} 
+       .replyDeBtn {
+         width: 60px; height: 30px; margin-left:5px;
+         background: #eee; border-radius: 5px; cursor: pointer;
+      }
+      .heart2{display:none;}
+   }
+   
+   @media screen and (max-width : 799px) {
+      .Contai { display:flex; width:340px; margin: 0 auto;}
+       #re-container{ width: 340px; margin: 60px auto; }
+       #re-container > li:nth-child(1) { padding: 20px 0; font-size: 26px; }
+       .re-img {
+           width:100%; height: 300px; margin: 30px 0;
+           background-size: cover;
+       }
+       .rc-detailbtn{
+           display: flex; justify-content: space-around; padding: 30px 0 0 0;
+       }
+       
+       .line { width: 340px; margin:0 auto; border: 1px solid #eee;}
+       
+       .reply-in {
+         width: 100%; height: 100px; padding: 15px;
+         border: 1px solid salmon;
+         background: #eee; border-radius: 10px;
+         resize: none; outline: none;
+      }
+      .re-input {width: 100px; padding: 0 0 10px 10px; border: none; outline: none; }
+       .btn-rePost{ margin: 10px 0 0 210px;}
+       
+       #reply {
+         width: 340px; height: 180px;
+         padding: 10px 20px; margin:20px auto 0;
+          border: 2px solid #eee; border-radius: 15px;
+       }
+
+       #reply > p { width: 100%; height: 70px; padding-top: 10px;}
+       
+       .reply-Btn{ display: flex; justify-content: end; width: 100%; margin-top:20px;} 
+      .replyDeBtn {
+         width: 60px; height: 30px; margin-left:5px;
+         background: #eee; border-radius: 5px; cursor: pointer;
+      }
+      .heart2{margin-bottom: 10px;}
+      .heart1{display:none;}
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
