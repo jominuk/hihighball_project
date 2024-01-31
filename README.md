@@ -1,13 +1,14 @@
 # ![favicon-removebg-preview](https://github.com/jominuk/hihighball_project/assets/117640309/a126587b-ff0d-4ea0-991c-caea71797706) Hi! highball
 
 
-# 📝 목차
+# 📝목차
 
 [1. STACK](#-stack)<br>
 [2. 프로젝트 소개](#-프로젝트-소개)<br>
 [3. 주요기능](#-주요기능)<br>
 [4. 기술적 의사결정](#-기술적-의사결정)<br>
 
+<br/>
 
 ## 💻 STACK
 [![My Skills](https://skillicons.dev/icons?i=mysql)](https://skillicons.dev)
@@ -15,6 +16,7 @@
 
 
 <br/>
+
 ## 📢 프로젝트 소개
 
 - 다양한 하이볼에 관한 정보뿐 아니라, 음료의 다양한 맛의 특징에 대한 깊은 이해를 제공 !
@@ -23,6 +25,7 @@
 
 
 <br/>
+
 ## ✨ 주요기능
 
 - 회원가입/로그인 기능
@@ -52,6 +55,7 @@
 
 
 <br/>
+
 ## 💡 기술적 의사결정
 
 - Spring Framework
