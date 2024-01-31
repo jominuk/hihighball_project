@@ -1,21 +1,29 @@
 # ![favicon-removebg-preview](https://github.com/jominuk/hihighball_project/assets/117640309/a126587b-ff0d-4ea0-991c-caea71797706) Hi! highball
 
 
-## 📝 목차
+# 📝 목차
 
-[1. 프로젝트 소개](#-프로젝트-소개)<br>
-[2. 주요기능](#-주요기능)<br>
-[3. 기술적 의사결정](#-기술적-의사결정)<br>
-[4. STACK](#-stack)<br>
+[1. STACK](#-stack)<br>
+[2. 프로젝트 소개](#-프로젝트-소개)<br>
+[3. 주요기능](#-주요기능)<br>
+[4. 기술적 의사결정](#-기술적-의사결정)<br>
 
-### 📢 프로젝트 소개
+
+## 💻 STACK
+[![My Skills](https://skillicons.dev/icons?i=mysql)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,spring,maven&theme=light)](https://skillicons.dev)
+
+
+<br/>
+## 📢 프로젝트 소개
 
 - 다양한 하이볼에 관한 정보뿐 아니라, 음료의 다양한 맛의 특징에 대한 깊은 이해를 제공 !
 - 전문가나 실무자를 통해 하이볼 제조의 기술을 배울 수 있는 경험 제공 !!
 - 하이볼의 황금 레시피, 페어링, 다양한 테마의 원데이 클래스 등 참여할 수 있는 경험 제공 !!!
 
 
-### ✨ 주요기능
+<br/>
+## ✨ 주요기능
 
 - 회원가입/로그인 기능
   - 회원가입 인증 처리 : 관리자모드, 매장관리자 모드, 유저 모드 3가지로 가입 가능
@@ -43,7 +51,8 @@
 
 
 
-### 💡 기술적 의사결정
+<br/>
+## 💡 기술적 의사결정
 
 - Spring Framework
   - 경량성과 모듈성
